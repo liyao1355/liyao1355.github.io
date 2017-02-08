@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="external_style_sheet.css" type="text/css">
     <style>
         div{ color: cornflowerblue; }
+        div p{color:coral}
         p{text-align: center;font-size:16px;}
         a:link {color:black;} 
         a:visited {color:coral; text-decoration:overline;} 
         a:hover {font-size:20; color:blue; text-decoration:underline;} 
         a:active {color:green; text-decoration:underline;}
-        .page_color{background-color: rosybrown}
+        .page_color{background-color: gainsboro}
 
     </style>
     <title>GitHub Test</title>
@@ -37,5 +38,16 @@
            
        </ul>
     </div>
+    <div>
+        <h1>title</h1>
+        <p>Lorem會被選到</p>
+    </div>
+    <div>
+        <article>
+            <h1>title</h1>
+            <p>這個p的上一層是article,但還是在div下面, 也會被選到</p>
+        </article>
+    </div>
+
 </body>
 </html>
