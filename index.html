@@ -2,52 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="external_style_sheet.css" type="text/css">
+    <title>個人履歷</title>
     <style>
-        div{ color: cornflowerblue; }
-        div p{color:coral;text-align: left}
-        p{text-align: center;font-size:16px;}
-        a:link {color:black;} 
-        a:visited {color:coral; text-decoration:overline;} 
-        a:hover {font-size:20; color:blue; text-decoration:underline;} 
-        a:active {color:green; text-decoration:underline;}
-        .page_color{background-color: gainsboro}
-
+        thead {text-align: center;font-weight: bold; border-bottom: solid; font-size: 24px;}
+        ul li {margin: 10px;}
+        
+        .item {font-size: 20px;font-family: fantasy}
     </style>
-    <title>GitHub Test</title>
 </head>
-<body >
-    <h1 class="page_color">標題</h1>
-    <div>
-       <ul>
-           <li type="square">個人簡介</li>
-               <table class="page_color">
-                   <tbody>
-                       <tr>
-                           <td>1</td>
-                           <td></td>
-                       </tr>
-                       <tr>
-                           <td>2</td>
-                           <td></td>
-                       </tr>
-                   </tbody>
-               </table>
-           <li type="square">學經歷</li>
-           <li type="square">測試連結:<a href=“http://www.google.com” target="_blank">測試文字</a></li>
-           
-       </ul>
-    </div>
-    <div>
-        <h1>title因為不是P所以不會變</h1>
-        <p>Lorem會被選到</p>
-    </div>
-    <div>
-        <article>
-            <h1>title</h1>
-            <p>這個p的上一層是article,但還是在div下面, 也會被選到</p>
-        </article>
-    </div>
-
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">穆永綸</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="item" colspan="2">學歷</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li type=square>高雄大學電機系學士</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li type="none">june 2013</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="item" colspan="2">經歷</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li type=square>有聲打工仔</li>
+                        <li type=square>報告產生器</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li type=none>2010-2013</li>
+                        <li type=none>2014-present</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="item" colspan="2">
+                <a href="https://liyao1355.github.io" target="_blank">網頁</a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
