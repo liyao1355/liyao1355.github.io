@@ -2,62 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>個人履歷</title>
+    <title>Document</title>
     <style>
-        thead {text-align: center;font-weight: bold; border-bottom: solid; font-size: 24px;}
-        ul li {margin: 10px;}
+        /*整體樣式*/
+        ul {
+            background-color: darkcyan;
+            list-style-type: none;
+        }
+        a:link {
+            color:white;
+        }
+        a:visited {
+            color: black;
+        }
+        .horizon, .horizon>li{
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 15px;
+            list-style-type: none;
+            font-size: 24px;
+        }
+        .horizon>li:hover, .vertical>li:hover{
+            background-color: orange;
+        }
+        .vertical {
+            padding: 5px 15px;
+            font-size: 18px;
+            width: 147px;
+            text-align: center;
+            border: 2px solid black;
+        }
+        /*drop1*/
+        #drop1 {
+            position:relative;
+            top:-42px;
+            left:520px;
+            
+        }
+        /*drop2*/
+        #drop2 {
+            position:relative;
+            top:-85px;
+            left:670px;
+            
+            display: none;
+        }
+        /*show*/
+        .master>.branch1:hover+drop1 {color:red;}
+        .branch2:hover .drop2 {display: block;}
         
-        .item {font-size: 20px;font-family: fantasy}
+        /*test*/
+        .a,.b,.a-a,.b-b {
+            font-size: 30px;
+            color:black;
+            cursor: pointer;
+        }
+        .a:hover>.a-a{color:red;}
+        .a:hover>.a-b{color: red;}
+        .a:hover+.b{color:green;}
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th colspan="2">穆永綸</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="item" colspan="2">學歷</td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li type=square>高雄大學電機系學士</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li type="none">june 2013</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td class="item" colspan="2">經歷</td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li type=square>有聲打工仔</li>
-                        <li type=square>報告產生器</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li type=none>2010-2013</li>
-                        <li type=none>2014-present</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td class="item" colspan="2">
-                <a href="https://www.google.com" target="_blank">網頁</a>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
+    <div class="master">
+        <ul class="horizon">
+            <li class="a"><a href="http://www.w3schools.com/tags/ref_byfunc.asp">item One:HTML</a></li>
+            <li class="b"><a href="https://www.1keydata.com/css-tutorial/tw/list.php">item Two:CSS</a></li>
+            <li><a href="http://www.ruanyifeng.com/blog/2009/03/css_selectors.html">item Three:CSS Selector</a></li>
+            <li class="branch1">
+                <a href="#">item More...</a>
+            </li>
+        </ul>
+    </div>
+    <div id="drop1">
+        <ul class="vertical">
+            <li><a href="#">go</a></li>
+            <li><a href="#">gogo</a></li>
+            <li class="branch2"><a href="#">go for more...</a></li>
+        </ul>
+    </div>
+    <div id="drop2">
+       <ul  class="vertical">
+           <li><a href="#">here you are!</a></li>
+           <li><a href="#">want more?</a></li>
+           <li><a href="#">no more...</a></li>
+       </ul>
+    </div>
+    <div class="a">a
+        <div class="a-a">a-a</div>
+        <div class="a-b">a-b</div>
+    </div>
+    <div class="b">b
+        <div class="b-b">b-b</div>
+    </div>
 </body>
 </html>
