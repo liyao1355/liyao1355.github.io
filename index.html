@@ -35,8 +35,8 @@
         /*drop1*/
         #drop1 {
             position:relative;
-            top:-42px;
-            left:520px;
+            /*top:-42px;
+            left:520px;*/
             
         }
         /*drop2*/
@@ -48,18 +48,20 @@
             display: none;
         }
         /*show*/
-        .master>.branch1:hover+drop1 {color:red;}
-        .branch2:hover .drop2 {display: block;}
+        .branch1:hover>.drop1 {color:red;}
+        .branch2:hover>.drop2 {display: block;}
         
         /*test*/
-        .a,.b,.a-a,.b-b {
+        .a,.b,.a-a,.b-b,.c {
             font-size: 30px;
             color:black;
             cursor: pointer;
         }
         
-        .a:hover>.a-b{color: red;}
+        .a:hover .a-b{color: red;}
+        .a:hover .a-a-a{color:pink;}
         .a:hover+.b{color:green;}
+        .a:hover>.b-b{color:blue;}
         .a:hover~.c{color:yellow;}
     </style>
 </head>
@@ -71,25 +73,31 @@
             <li><a href="http://www.ruanyifeng.com/blog/2009/03/css_selectors.html">item Three:CSS Selector</a></li>
             <li class="branch1">
                 <a href="#">item More...</a>
+                <div class="drop1">
+                    <ul class="vertical">
+                        <li><a href="#">go</a></li>
+                        <li><a href="#">gogo</a></li>
+                        <li class="branch2">
+                            <a href="#">go for more...</a>
+                            <div id="drop2">
+                               <ul  class="vertical">
+                                   <li><a href="#">here you are!</a></li>
+                                   <li><a href="#">want more?</a></li>
+                                   <li><a href="#">no more...</a></li>
+                               </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
-    <div id="drop1">
-        <ul class="vertical">
-            <li><a href="#">go</a></li>
-            <li><a href="#">gogo</a></li>
-            <li class="branch2"><a href="#">go for more...</a></li>
-        </ul>
-    </div>
-    <div id="drop2">
-       <ul  class="vertical">
-           <li><a href="#">here you are!</a></li>
-           <li><a href="#">want more?</a></li>
-           <li><a href="#">no more...</a></li>
-       </ul>
-    </div>
+    
+    
     <div class="a">a
-        <div class="a-a">a-a</div>
+        <div class="a-a">a-a
+            <div class="a-a-a">a-a-a</div>
+        </div>
         <div class="a-b">a-b</div>
     </div>
     <div class="b">b
