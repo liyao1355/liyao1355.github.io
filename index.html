@@ -57,9 +57,10 @@
             color:black;
             cursor: pointer;
         }
-        .a:hover>.a-a{color:red;}
+        
         .a:hover>.a-b{color: red;}
         .a:hover+.b{color:green;}
+        .a:hover~.c{color:yellow;}
     </style>
 </head>
 <body>
@@ -94,5 +95,6 @@
     <div class="b">b
         <div class="b-b">b-b</div>
     </div>
+    <div class="c">c</div>
 </body>
 </html>
